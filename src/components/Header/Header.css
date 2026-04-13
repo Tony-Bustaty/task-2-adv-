@@ -1,0 +1,13 @@
+.top-banner-container{
+    border:2px solid #333;
+    border-radius: 8px;
+    height:58px;
+    margin-bottom:1.4rem;
+}
+.top-banner{
+    background-image: url('/assets/Top Banner.png');
+    background-position: center center ;
+    height:100%;
+    background-size: cover;
+   
+}

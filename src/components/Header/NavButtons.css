@@ -1,0 +1,89 @@
+.buttons-list {
+  display: flex;
+  margin: 0;
+  align-items: stretch;
+}
+.buttons-list + button {
+  display: none;
+}
+.button {
+  cursor: pointer;
+  list-style-type: none;
+  font-family: "Outfit";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 2rem;
+  line-height: 150%;
+  padding: 25px 35px;
+  border-left: 2px solid #333;
+}
+.button:last-of-type {
+  background-color: #ffae80;
+}
+.menu-list {
+  display: none;
+}
+@media screen and (max-width: 1350px) {
+  .buttons-list {
+    display: none;
+  }
+  .buttons-list + button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3rem;
+    background-color: #ffefe5;
+    cursor: pointer;
+    border-width: 0px, 2px, 0px, 2px;
+
+    border-style: solid;
+
+    border-color: #262626;
+  }
+  @keyframes overlayFadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+  .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 40;
+      opacity: 0;
+  animation: overlayFadeIn 0.25s ease forwards;
+    }
+@keyframes drawerSlideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+  .menu-list {
+    position: fixed;
+    top: 0;
+    right: 0; /* slide from right */
+    height: 100vh;
+    width: 80vw; /* or 100vw if you want full screen */
+    max-width: 400px;
+    background: white;
+    z-index: 1000;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+  transform: translateX(100%);
+  animation: drawerSlideIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    .close {
+      position: absolute;
+      cursor: pointer;
+      top: 2rem;
+      right: 5rem;
+      background-color: #fff;
+      border: none;
+    }
+    
+    .buttons-list-mobile {
+      display: flex;
+      margin: 0;
+      flex-direction: column;
+    }
+  }
+}

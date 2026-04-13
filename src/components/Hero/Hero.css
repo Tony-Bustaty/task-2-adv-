@@ -1,0 +1,119 @@
+.hero {
+  display: flex;
+  flex: 1;
+}
+.img-container {
+  background-image: url("/assets/children.jpg");
+  background-color: var(--orange-80);
+  background-size: cover;
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 66.3rem;
+  border: 2px solid #333;
+  border-radius: 1rem;
+  position: relative;
+  .circle {
+    height: 2rem;
+    width: 2rem;
+    background: #ffffff;
+    border: 2px solid #262626;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 50;
+  }
+  .circle-1{
+    top:-1rem;
+    left:-1rem;
+  }
+  .circle-2{
+     top:-1rem;
+    right:-1rem;
+  }
+  .circle-3{
+     bottom:-1rem;
+    left:-1rem;
+  }
+  .circle-4{
+     bottom:-1rem;
+    right:-1rem;
+  }
+}
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5rem;
+  .welcome-container {
+    .welcome-text {
+      border-bottom: 3px solid #333;
+      max-width: 30rem;
+    }
+    p {
+      font-family: "Outfit";
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 150%;
+    }
+
+    h2 {
+      font-family: "Raleway";
+      font-weight: 800;
+      font-style: ExtraBold;
+      font-size: 4rem;
+      line-height: 130%;
+    }
+  }
+}
+.statistics {
+  display: flex;
+  align-items: center;
+  padding: 2rem 4rem;
+  gap: 1rem;
+  border: 2px solid #333;
+  border-radius: 1rem;
+  margin-top: 5rem;
+  background-color: #ffefe5;
+  box-shadow: 6px 6px 0px 1px #ffbe99;
+}
+.statistics-info {
+  padding: 1.6rem 0.8rem;
+  p {
+    font-family: "Outfit";
+    font-weight: 800;
+    font-style: ExtraBold;
+    font-size: 3.4rem;
+    line-height: 150%;
+  }
+  span {
+    display: block;
+    font-family: "Outfit";
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .img-container {
+    height: 36.2rem;
+    background-position: bottom;
+  }
+  .statistics {
+    flex-direction: column;
+    text-align: center;
+  }
+  .statistics-info {
+    min-width: 100%;
+    border-bottom: 2px solid #333;
+  }
+  .intro-container {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,9 @@
+.logo {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  h2 {
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+}

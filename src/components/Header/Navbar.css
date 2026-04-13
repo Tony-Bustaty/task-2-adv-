@@ -1,0 +1,13 @@
+.navbar {
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+}
+.logo-container {
+padding:2rem 2.4rem;
+background-color: var(--logo-background);
+}
+

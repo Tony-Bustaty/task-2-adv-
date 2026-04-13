@@ -1,0 +1,52 @@
+.accordion {
+  border: 2px solid #262626;
+  border-radius: 1rem;
+  padding: 3.4rem 3rem;
+  display: flex;
+  align-items:start;
+  gap: 2.5rem;
+
+  .title {
+    font-family: "Outfit";
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 150%;
+      max-width: 50rem;
+  }
+
+  .accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition:
+      max-height 0.6s ease-out,
+      opacity 0.6s ease-in;
+    opacity: 0;
+    .details {
+      font-family: "Outfit";
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 150%;
+      max-width: 50rem;
+    }
+  }
+  .accordion-content.show {
+    max-height: 50rem;
+    opacity: 1;
+  }
+  .accordion:has(.accordion-content.show){
+    justify-self: flex-start;
+  }
+  .icon {
+    border: 2px solid #262626;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff5f0;
+    min-width: 3.2rem;
+    max-height: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
