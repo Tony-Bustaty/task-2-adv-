@@ -55,12 +55,12 @@ function Testimonials() {
   }
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(getVisibleSlides());
-console.log(visible)
+  console.log(visible);
 
   useEffect(() => {
     const handleResize = () => {
       setVisible(getVisibleSlides());
-      };
+    };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -100,7 +100,10 @@ console.log(visible)
             }}
           >
             {testimonials.map((testimony) => (
-              <div className="slide" key={testimony.name}>
+              <div
+                className="slide"
+                key={testimony.name}
+              >
                 <Testimony key={testimony.name} testimony={testimony} />
               </div>
             ))}
